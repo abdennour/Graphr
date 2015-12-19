@@ -134,7 +134,7 @@ function JSgui() {
 		$("#graph_inputs div.graph_input_wrapper").each(function() {
 			$(this).bind("click", function() {
 				var id = $(this).attr("id");
-				var num = String(id).replace("graph_input_wrapper_", "");
+				var num =id.replace(/[^0-9.]/g, "");
 				jsgui.selectEquation(num);
 			});
 		});
